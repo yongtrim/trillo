@@ -1,0 +1,98 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: $color-grey-light-1;
+  @include shadow-dark;
+
+  min-height: 50rem;
+
+  @include respond(largest)  {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  @include line-bottom;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
+}
+
+.content {
+  display: flex;
+
+  @include respond(medium) {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  background-color: $color-grey-dark-1;
+
+  flex: 0 0 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  background-color: #fff;
+
+  flex: 1;
+}
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: $color-grey-light-1;
+  @include line-bottom;
+  
+  @include respond(medium) {
+    padding: 3rem;
+  }
+
+  @include respond(small) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #fff;
+
+  @include shadow-light;
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+
+  @include respond(medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @include respond(small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.user-reviews {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
