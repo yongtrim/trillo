@@ -43,6 +43,10 @@
 
   flex: 0 0 18%;
 
+  @include respond(medium) {
+    flex: none;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,7 +62,11 @@
   font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
+
+  flex-wrap: wrap;
+
   background-color: $color-grey-light-1;
+
   @include line-bottom;
   
   @include respond(medium) {
@@ -86,13 +94,19 @@
   @include respond(small) {
     margin-right: 0;
     margin-bottom: 3rem;
+    flex: none; // for ie11
   }
 }
 
 .user-reviews {
+
   flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include respond(small) {
+    flex: none; // for ie11
+  }
 }

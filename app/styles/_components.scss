@@ -460,12 +460,15 @@
 // REVIEWS
 .review {
   background-color: #fff;
+
   @include shadow-light;
 
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+  
+  width: 100%;  // for ie11
 
   @include respond(medium) {
     padding: 2rem;
@@ -531,9 +534,14 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+  
+  flex: 0 0 100%;
 
   @include respond(medium) {
     padding: 2.5rem 0;
+  }
+  @include respond(small) {
+    flex: none; // for ie11
   }
 
   &__book-now {

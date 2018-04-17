@@ -9,7 +9,8 @@ gulp.task('cssInject', ['styles'], () => {
 
 gulp.task('htmlInject', () => {
   return gulp.src('./app/index.html')
-    .pipe(gulp.dest('./temp/'));
+    .pipe(gulp.dest('./temp/'))
+    .pipe(browserSync.stream());
 })
 
 // gulp.task('deleteTempFolder', () => {
